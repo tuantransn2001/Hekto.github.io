@@ -1,0 +1,135 @@
+.treding__product{
+    .trending__product__title{
+        @include textStyle( $fs-42 , $bold , $lh-42-2 , $blue-color-2 , center );
+    }
+    // Normal product
+    .trending__product__list{
+        .trending__product__item{
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            padding: 11px 11px 32px 11px;
+            .treding__product__item__img__wrapper{
+                height: 255px;
+                background-color: $white-color-4;
+                position: relative;
+                .trending__product__item__img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .trending__product__item__data{
+                padding-top: 15px;
+                .trending__product__item__data__name{
+                    @include textStyle( $fs-16 , $bold , $lh-16-7 , $blue-color-2 , center );
+                }
+                .trending__product__item__data__price{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .trending__product__item__data__new__price{
+                        @include textStyle( $fs-14 , normal , $lh-14-1  , $blue-color-2 , center );
+                        margin-right: 12px;
+                    }
+                    .trending__product__item__data__old__price{
+                        @include textStyle( $fs-12 , normal , $lh-12 , $blue-color-2 , center );
+                        opacity: 0.3;
+                        position: relative;
+                    }
+                    .trending__product__item__data__old__price::after{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        height: 1px;
+                        width: 100%;
+                        background-color: $blue-color-2;
+                        opacity: 0.3;
+                    }
+                }
+            }
+        }
+    }
+    // Sell off product
+    .trending__product__selloff__list{
+        .trending__product__selloff{
+            height: 270px;
+            background-color: $pink-color-2;
+            box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+            padding: 34px 0 0 25px;
+            position: relative;
+            .trending__product__selloff__data__percent{
+                @include textStyle( $fs-26 , normal , $lh-26 , $blue-color-2 , left );
+            }
+            .trending__product__selloff__data__link{
+                @include textStyle( $fs-16 , normal , $lh-16 , $red-color-1 , left );
+                position: relative;
+            }
+            .trending__product__selloff__data__link::after{
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $red-color-1;
+            }
+            .trending__product__selloff__data__img__wrappper{
+                width: 213px;
+                height: 207px;
+                position: absolute;
+                bottom: 2px;
+                right: 6px;
+                .trending__product__selloff__data__img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .trending__product__selloff__data__img__wrappper.product__2nd{
+                width: 312px;
+                height: 173px;
+            }
+        }
+        .trending__product__selloff.blue{
+            background-color: $blue-color-3;
+        }
+        .trending__product__selloff__3rd__list{
+            .trending__product__selloff__3rd__item{
+                height: 74px;
+                display: flex;
+                align-items: center;
+                .trending__product__selloff__3rd__item__img__wrapper{
+                    width: 107px;
+                    margin-right: 9px;
+                    background-color: $white-color-6;
+                    padding-left: 21px;
+                    .trending__product__selloff__3rd__item__img{
+                        width: 64px;
+                        height: 71px;
+                    }
+                }
+                .trending__product__selloff__3rd__item__data{
+                    .trending__product__selloff__3rd__item__name{
+                        @include textStyle( $fs-16 , normal , $lh-16-4 ,$blue-color-2 , left );
+                    }
+                    .trending__product__selloff__3rd__item__price{
+                        @include textStyle( $fs-12 , normal , $lh-12 , $blue-color-2 , left);
+                        position: relative;
+                        display: inline-block;
+                    }
+                    .trending__product__selloff__3rd__item__price::after{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $blue-color-2;
+                    }
+                }
+            }
+        }
+    }
+}

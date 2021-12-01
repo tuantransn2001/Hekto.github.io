@@ -1,0 +1,90 @@
+.discount__product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .discount__product__title{
+        @include textStyle( $fs-42 , $bold , $lh-42-2 , $blue-color-2 , center );
+    }
+    .discount__product__options{
+        display: flex;
+        align-items: center;
+        .discount__product__option{
+            @include textStyle( $fs-18 , normal , $lh-18 , $blue-color-2 , left );
+            margin-right: 26px;
+            position: relative;
+        }
+        .discount__product__option::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: calc(100% + 5px);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $red-color-4;
+            opacity: 0;
+            
+        }
+        .discount__product__option::before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $red-color-4;
+            opacity: 0;
+        }
+        .discount__product__option:hover{
+            color: $red-color-4;
+            transition: all ease .25s;
+            cursor: pointer;
+            &::after{
+                opacity: 1;
+                transition: all ease .25s;
+            }
+            &::before{
+                opacity: 1;
+                transition: all ease .25s;
+            }
+        }
+    }
+    .discount__product__info{
+        align-self: flex-start;
+        position: relative;
+        .discount__product__info__img__wrapper{
+            width: 699px;
+            height: 579px;
+            position: absolute;
+            left: 515px;
+            bottom: -105px;
+        }
+        .discount__product__info__title{
+            @include textStyle( $fs-35 , $bold , $lh-35 , $blue-color-2 , left );
+        }
+        .discount__product__info__subtitle{
+            @include textStyle( $fs-21 , normal , $lh-21 , $red-color-1 , left );
+        }
+        .discount__product__info__desc{
+            @include textStyle( $fs-17 , normal , $lh-17 , $purple-color-6 , left );
+        }
+        .discount__product__info__ads{
+            .discount__product__info__ad{
+                display: flex;
+                align-items: center;
+                .discount__product__info__ad__icon{
+                    font-size: 1rem;
+                    color: $blue-color-8;
+                    margin-right: 6px;
+                }
+                .discount__product__info__ad__text{
+                    @include textStyle( $fs-16 , normal , $lh-16 , $purple-color-7 , left );
+                }
+            }
+        }
+        .discount__product__info__button{
+            @include button( 20px , 48px , 2px , $red-color-1 , $fs-17 , $lh-17 , $white-color-3 );
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.footer__background{
+    background-color: $blue-color-3;
+    padding: 95px 0 101px 310px;
+    footer{
+        .footer__row{
+            display: flex;
+            .footer__column__1{
+                margin-right: 71px;
+                .footer__list{
+                    .footer__logo{
+                        @include textStyle( $fs-38 , $bold , $lh-38 , $black-color-2 , left );
+                    }
+                    .footer__input__bar{
+                        width: 377px;
+                        height: 44px;
+                        position: relative;
+                        .footer__input{
+                            width: 377px;
+                            height: 44px;
+                            background-color: $white-color-3;
+                            border: none;
+                            outline: none;
+                            padding: 14px 0 11px 20px;
+                        }
+                        .footer__input::placeholder{
+                            @include textStyle( $fs-16 , normal , $lh-16-8 , $purple-color-3 , left );
+                        }
+                        .footer__button{
+                            @include button( 9px , 40px , 2px , $red-color-1 , $fs-16 , $lh-16-4 , $white-color-3  );
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 2px;
+                        }
+                    }
+                    .footer__text__about{
+                        .footer__text__about__item{
+                            @include textStyle( $fs-16 , normal , $lh-16-8 , $purple-color-3 , left );
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .footer__column__2{
+                margin-right: 92px;
+            }
+            .footer__column__3{
+                margin-right: 88px;
+            }
+            .footer__column__2,
+            .footer__column__3,
+            .footer__column__4{
+                .footer__title{
+                    @include textStyle( $fs-22 , normal  ,$lh-22 , $black-color-2 , left );
+                }
+                .footer__list{
+                    .footer__item{
+                        .footer__item__link{
+                            @include textStyle( $fs-16 , normal , $purple-color-3 , $lh-16-8 , left);
+                        }
+                    }
+                    .footer__item:not(:last-child){
+                        margin-bottom: 21px;
+                    }
+                }
+            } 
+        }
+    }
+
+     
+}
+.footer__about__us{
+    background-color: $purple-color-9;
+    height: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 583px 0 310px ;
+    .footer__about__us__left{
+        @include textStyle( $fs-16 , $semi-bold , $lh-16-8 , $gray-color-3 , left );
+    }
+    .footer__about__us__social__list{
+        display: flex;
+        align-items: center;
+        .footer__about__us__social__item{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $blue-color-2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            .footer__about__us__social__item__link{
+                .footer__about__us__social__item__icon{
+                    font-size: 0.7rem;
+                    color: $white-color-3;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.shopexOffer{
+    .shopexOffer__title{
+        @include textStyle( $fs-42 , $bold , $lh-42-2 , $blue-color-2 , center );
+    }
+    .shopexOffer__supply__list{
+        .shopexOffer__supply{
+            height: 320px;
+            box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+            .shopexOffer__supply__img__wrapper{
+                height: 147px;
+                position: relative;
+                .shopexOffer__supple__img{
+                    width: 65px;
+                    height: 43px;
+                    position: absolute;
+                    top: 67px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .shopexOffer__supply__data{
+                .shopexOffer__supply__data__heading{
+                    @include textStyle( $fs-22 , normal , $lh-22 , $blue-color-2 , center );
+                }
+                .shopexOffer__supply__data__desc{
+                    @include textStyle( $fs-16 , normal , $lh-16-5 , $purple-color-4 , center);
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+}

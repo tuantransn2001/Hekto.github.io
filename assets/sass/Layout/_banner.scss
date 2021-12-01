@@ -1,0 +1,14 @@
+.banner{
+    background-image: url('/assets/img/Banner/background.png');
+    height: 462px;
+    padding-top: 177px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .banner__title{
+        @include textStyle( $fs-35 , $bold , $lh-35 , $blue-color-2 , center);
+    }
+    .banner__button{
+        @include button( 16px , 34px , 2px , $red-color-1 , $fs-17 ,$lh-17 , $white-color-3 );
+    }
+}

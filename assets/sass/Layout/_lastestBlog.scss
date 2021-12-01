@@ -1,0 +1,68 @@
+.lastest__blog{
+   .lastest__blog__title{
+        @include textStyle( $fs-42 , $bold , $lh-42-2 , $blue-color-2 , center );
+   } 
+   .lastest__blog__posts{
+       .lastest__blog__post{
+           cursor: pointer;
+            box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+            border-radius: 5px;
+           .last__blog__post__img__wrapper{
+               height: 255px;
+               .lastest__blog__post__img{
+                   width: 100%;
+                   height: 100%;
+                   border-radius: 8px;
+               }
+           }
+           .lastest__blog__info{
+               display: flex;
+               align-items: center;
+               padding: 0 14px;
+               .lastest__blog__item{
+                   display: flex;
+                   margin-right: 29px;
+                    .lastest__blog__icon{
+                        width: 12px;
+                        height: 12px;
+                        margin-right: 8px;
+                    }
+                    .lastest__blog__text{
+                        @include textStyle( $fs-14 , normal , $lh-14-1 , $blue-color-1 , left );
+                    }
+               }
+           }
+           .last__blog__data{
+               padding: 0 0 35px 14px;
+               .last__blog__heading{
+                   @include textStyle( $fs-18 , $bold , $lh-18 , $blue-color-2 , left );
+               }
+               .lastest__blog__body{
+                   @include textStyle( $fs-16 , normal , $lh-16 , $gray-color-2 , left );
+               }
+               .lastest__blog__button{
+                    @include textStyle( $fs-16 , normal , $lh-16 , $blue-color-2 , left );
+                    position: relative;
+               }
+               .lastest__blog__button::after{
+                   content: '';
+                   position: absolute;
+                   top: 100%;
+                   left: 0;
+                   height: 1px;
+                   width: 100%;
+                   background-color: $blue-color-2;
+               }
+           }
+       }
+       .lastest__blog__post:hover .last__blog__data .last__blog__heading,
+       .lastest__blog__post:hover .last__blog__data .lastest__blog__button{
+           color: $red-color-1;
+           transition: all ease .25s;
+       }       
+       .lastest__blog__post:hover .last__blog__data .lastest__blog__button::after{
+            background-color: $red-color-1;
+            transition: all ease .25s;
+       }
+   }
+}

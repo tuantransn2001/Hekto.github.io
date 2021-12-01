@@ -1,0 +1,9 @@
+.partner{
+    display: flex;
+    justify-content: center;
+    .partner__logo{
+        width: 904px;
+        height: 93px;
+        object-fit: cover;
+    }
+}

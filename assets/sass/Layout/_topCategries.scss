@@ -1,0 +1,73 @@
+.top__categories{
+    .top__categories__title{
+        @include textStyle( $fs-42 , $bold , $lh-42-2 , $blue-color-2 , center );
+    }
+    .top__categories__slider{
+        .top__categories__slides__wrapper{
+            .top__categories__slide{
+                cursor: pointer;
+                .top__categories__img__wrapper{
+                    width: 269px;
+                    height: 269px;
+                    border-radius: 50%;
+                    background-color: $white-color-4;
+                    position: relative;
+                    .top__categories__img{
+                        width: 178px;
+                        height: 178px;
+                        position: absolute;
+                        top: 46px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 2;
+                    }                    
+                    .top__categories__button{
+                        @include button( 9px , 18px , 2px , $green-color-1 , $fs-12 , $lh-12 , $white-color-3 );
+                        position: absolute;
+                        top: 219px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 2;
+                        display: none;
+                    }
+                }
+                .top__categories__img__wrapper::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: $purple-color-8;
+                    z-index: 1;
+                    display: none;
+                }
+                .top__categories__data{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .top__categories__options{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .top__categories__option{
+                            cursor: pointer;
+                            margin-right: 7px;
+                            @include textStyle( $fs-20 , normal , $lh-20 , $blue-color-2 , left )
+                        }
+                    }
+                    .top__categories__price{
+                        @include textStyle( $fs-16 , normal , $lh-16-4 , $blue-color-2 , left );
+                    }
+                }
+            }
+            .top__categories__slide:hover .top__categories__img__wrapper .top__categories__button{
+                display: inline-block;
+            }
+            .top__categories__slide:hover .top__categories__img__wrapper::after{
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@mixin textStyle( $fs, $fw , $lh , $cl , $t-al ){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $cl;
+    text-align: $t-al;
+}
+
+@mixin button( $button-padding-y , $button-padding-x , $button-boder-radius , $button-background-color , $button-content-font-size , $button-content-line-height , $button-content-color ){
+    // About Shape
+    display: inline-block;
+    padding: $button-padding-y $button-padding-x;
+    border-radius: $button-boder-radius;
+    background-color: $button-background-color; 
+    // About content
+    font-size: $button-content-font-size;
+    line-height: $button-content-line-height;
+    color: $button-content-color;
+
+}

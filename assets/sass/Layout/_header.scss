@@ -1,0 +1,134 @@
+//  =========================== Header ===========================
+header{
+    // Header Info
+    .header__info__background{
+        background-color: $purple-color-1;
+        height: 44px;
+        .header__info{     
+            height: 44px;       
+            // Header info left
+            .header__info__left{
+                height: 44px;
+                display: flex;
+                align-items: center;
+                .header__info__left__wrapper{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 48px;
+                    .header__info__left__icon__wrapper{
+                        width: 16px;
+                        height: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                    }
+                    .header__info__left__data{
+                        @include textStyle( $fs-16 , normal , $lh-16 , $white-color-1 , left );
+                    }
+                }
+            }
+            .header__info__right{
+                height: 44px;
+                display: flex;
+                align-items: center;
+                float: right;
+                .header__info__naviagtion{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 27px;
+                    .header__info__subnavigation{
+                        display: flex;
+                        align-items: center;
+                        margin-right: 20px;
+                        .header__info__subnavigation__text{
+                            @include textStyle( $fs-16 , normal , $lh-16 , $white-color-1, left );
+                            margin-right: 5px;
+                        }
+                        .header__info__subnavigation__icon{
+                            font-size: 0.8rem;
+                            color: $white-color-1;
+                        }
+                    }
+                }
+                .shopping__cart__wrapper{
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .shopping__cart{
+                        font-size: 1.5rem;
+                        color: $white-color-1;
+                    }
+                }
+            }
+        }
+    }
+    // Header
+    .header{
+        height: 78px;
+        .header__left{
+            height: 78px;
+            display: flex;
+            align-items: center;
+            .header__logo{
+                display: block;
+                @include textStyle( $fs-34 , normal , $lh-34 , $black-color-1 , left );
+                margin-right: 88px;
+            }
+            .header__left__naviagation{
+                display: flex;
+                align-items: center;
+                .header__left__subnavigation{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 35px;
+                    cursor: pointer;
+                    .header__left__subnavigation__text{
+                        @include textStyle( $fs-16 , normal , $lh-16-2 , $black-color-1 , left );
+                    }
+                    .header__subnavigation__icon{
+                        font-size: 0.7rem;
+                        margin-left: 2px;
+                    }
+                }
+                .header__left__subnavigation:hover .header__left__subnavigation__text{
+                    color: $red-color-1;
+                }
+                .header__left__subnavigation:hover .header__subnavigation__icon{
+                    color: $red-color-1;
+                }
+            }
+        }
+        .header__right{
+            float: right;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            .header__searchBar__wrapper{
+                display: flex;
+                .header__searchBar__input{
+                    width: 266px;
+                    height: 41px;
+                    outline: none;
+                    border: 2px solid $white-color-2;
+                    border-right: none;
+                    padding: 5px;
+                }
+                .header__searchBar__icon__wrappper{
+                    width: 51px;
+                    height: 41px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $red-color-1;
+                    .header__searchBar__icon{
+                        font-size: 1.3rem;
+                        color: $white-color-2;
+                    }
+                }
+            }
+        }
+    }
+}

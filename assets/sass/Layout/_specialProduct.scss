@@ -1,0 +1,66 @@
+.special__product{
+    background-color: $purple-color-5;
+    height: 579px;
+    margin-right: 54px;
+    padding: 26px 0 0 977px;
+    position: relative;
+    .special__product__img__wrapper{
+        position: absolute;
+        top: -56px;
+        left: 425px;
+        .special__product__img{
+            width: 558px;
+            height: 550px;
+        }
+    }
+    .special__product__data{
+        .special__product__data__tile{
+            @include textStyle( $fs-35 , $bold , $lh-35 , $blue-color-2 , left );
+            letter-spacing: 1.5;
+        }
+        .special__product__data__desc__list{
+            .specila__product__data__desc__item{
+                display: flex;
+                align-items: center;
+                .specila__product__data__desc__item__dot{
+                    width: 11px;
+                    height: 11px;
+                    border-radius: 50%;
+                    background-color: red;
+                    margin-right: 10px;
+                }
+                .specila__product__data__desc__item__dot.red{
+                    background-color: $red-color-3
+                }
+                .specila__product__data__desc__item__dot.blue{
+                    background-color: $blue-color-7;
+                }
+                .specila__product__data__desc__item__dot.green{
+                    background-color: $green-color-3;
+                }
+                .specila__product__data__desc__item__text{
+                    @include textStyle( $fs-16 , $medium , $lh-16-6 ,$gray-color-1 , left );
+                }
+            }
+            .specila__product__data__desc__item:not(:last-child){
+                margin-bottom: 13px;
+            }
+        }
+        .special__product__datta__footer{
+            display: flex;
+            align-items: center;
+            .special__product__datta__footer__button{
+                @include button( 14px , 24px , 2px , $red-color-1 , $fs-17 , $lh-17 , $white-color-3 );
+                margin-right: 19px;
+            }
+            .special__product__data__footer__info{
+                .special__product__data__footer__info__produce{
+                    @include textStyle( $fs-14, normal , $lh-14-1 , $blue-color-2 , left );
+                }
+                .specila__product__data__footer__price{
+                    @include textStyle( $fs-14 , normal , $lh-14-2 , $blue-color-2 , left );
+                }
+            }
+        }
+    }
+}
